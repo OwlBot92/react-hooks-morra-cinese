@@ -210,3 +210,45 @@ const GameBoard = (props) => {
 }
 
 export default GameBoard;
+
+
+const pickWinner = (player, cpu, userChoice, iaChoice) => {
+    let objRules = {
+        paper: {
+            rock: player,
+            spock: player,
+            lizard: cpu,
+            scissors: cpu,
+            paper: "draw",
+        },
+        rock: {
+            scissors: player,
+            lizard: player,
+            spock: cpu,
+            paper: cpu,
+            rock: "draw",
+        },
+        scissors: {
+            lizard: player,
+            paper: player,
+            spock: cpu,
+            rock: cpu,
+            scissors: "draw",
+        },
+        spock: {
+            rock: player,
+            scissors: player,
+            lizard: cpu,
+            paper: cpu,
+            spock: "draw",
+        },
+        lizard: {
+            spock: player,
+            paper: player,
+            rock: cpu,
+            scissors: cpu,
+            lizard: "draw",
+        },
+    }
+    return objRules[userChoice][iaChoice]
+}
