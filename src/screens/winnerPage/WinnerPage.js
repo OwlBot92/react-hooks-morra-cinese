@@ -1,7 +1,7 @@
 import './WinnerPage.css';
 import { useEffect } from 'react';
 import { get } from 'lodash';
-
+/* other pc */
 import Button from '../../components/funcComponents/ui/button/Button';
 import TextComponent from '../../components/funcComponents/ui/textComponent/TextComponent';
 import LeaderBoard from '../../components/funcComponents/leaderBoard/LeaderBoard.jsx';
